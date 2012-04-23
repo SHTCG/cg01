@@ -1,9 +1,8 @@
 /**********************************************************
   * Filename         : base.css
   * Description      : The Site and the related basic css class of common
-  * Author           : Webdesign CGx
   * Date             : 16/04/2012
-  * Revision History : CGX 2011-02-22 (gnb line-height correction)
+  * Revision History : CG 2011-02-22 
 ***********************************************************/
 @import "gnb.css";
 @import "class.css";
