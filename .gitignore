@@ -1,9 +1,129 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
+/**********************************************************
+  * Filename         : base.css
+  * Description      : The Site and the related basic css class of common
+  * Author           : Webdesign CGx
+  * Date             : 16/04/2012
+  * Revision History : CGX 2011-02-22 (gnb line-height correction)
+***********************************************************/
+@import "gnb.css";
+@import "class.css";
 
-# Project property files
-.actionScriptProperties
-.flexProperties
-.settings/
-.project
+/* |  tag & id  | */
+* {margin:0;padding:0;}
+body {text-align:center;}
+#wrap {width:940px;margin:0 auto;padding-right:55px;font:12px 'arial','dotum';text-align:left;}
+#wrap:after {display:block;overflow:hidden;clear:both;content:''}
+#iframeWrap {text-align:left;}
+#w940 {width:940px;padding:0;}
+#w749 {width:749px;padding:0;}
+ul {list-style:none;}
+input {vertical-align:middle;}
+h1, h2 {clear:both;float:left;}
+frame, iframe { border:0; }
+address,caption,cite,code,dfn,em,i,var{font-style:normal}
+
+/* |  font  | */
+body, td, div, h1, h2, h3, h4, select, input, textarea {font:normal 12px 'arial','dotum','arial';color:#8b8d8e;}
+
+/* |  img  | */
+img {border:0;}
+.png24 {tmp:expression(setPng24(this));}
+li img {vertical-align:top;}
+dt img ,dd img {vertical-align:top;}
+
+/* |  a  | */
+a   {color:#8b8d8e;text-decoration:none;}
+a:hover {color:#8b8d8e;text-decoration:underline;}
+
+/* |  layout  | */
+#layBody {clear:both;width:940px;padding-top:15px;overflow:hidden}
+#layBody:before {display:block;overflow:hidden;clear:both;content:''}
+#layLeft {float:left;width:176px;padding-right:15px;}
+#layRight {float:left;width:749px;}
+
+/* | cate & location bar | */
+#catePosition {clear:both;float:left;width:940px;margin-top:12px;}
+#cateAllView {position:relative;float:left;width:176px;height:21px;margin-right:15px;z-index:11990;}
+	#gnbNaviArea {position:absolute;top:0;left:0;width:176px;height:21px;overflow:hidden;}
+#pageLocationArea {position:relative;float:left;width:749px;color:#000;text-align:left;z-index:2600;}
+	#pageLocationArea .home {padding:4px 20px 0 0;background:url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bg_cp_div.gif') no-repeat 100% 0;color:#5C5C5C;}
+		#pageLocationArea .home a {color:#5C5C5C;}
+	#pageLocationArea .noBg {padding-right:0;background:transparent;}
+	#pageLocationArea div	{position:relative;float:left;}
+	#pageLocationArea .div {padding-right:20px;background:url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bg_cp_div.gif') no-repeat 100% 0;}
+	#pageLocationArea .selTxt {width:147px;height:15px;padding:4px 0 0 14px;background:url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bg_cp_arrow.gif') no-repeat 100%;color:#5C5C5C;border:1px solid #D2D2D2;cursor:pointer;}
+	#pageLocationArea span {display:block;}
+
+	LNB, Breadcrumb Navigation onoff-related changes (tablet extended) 2011-12-13 * 
+	#pageLocationArea .big {display:none;position:absolute;top:20px;left:0;padding-top:5px}
+	#pageLocationArea .big ul {width:373px;padding-bottom:10px;background:#fff;border:2px solid #BED600}
+		#pageLocationArea .big .lc {float:left;width:186px;margin-top:10px;border-right:1px solid #E1E4E6;}
+		#pageLocationArea .big a {display:inline-block;width:162px;height:18px;padding:3px 12px 0;background:#fff;color:#5C5C5C;overflow:hidden;line-height:1.5em;}
+		#pageLocationArea .big a:hover {background:#BED600;color:#2c2a1a;text-decoration:none;}
+		#pageLocationArea .big a.on {color:#00959C;text-decoration:underline;}
+		#pageLocationArea .big .pline {width:166px;height:1px;margin:5px 10px;border-top:1px solid #E1E4E6;overflow:hidden;}
+		#pageLocationArea .big .rc {float:left;width:186px;margin-top:10px;}
+	
+	#pageLocationArea .middle {display:none;position:absolute;top:20px;left:0;padding-top:5px}
+	#pageLocationArea .middle ul {width:373px;padding-bottom:10px;background:#fff;border:2px solid #BED600}
+		#pageLocationArea .middle .lc {float:left;width:186px;margin-top:10px;border-right:1px solid #E1E4E6;}
+		#pageLocationArea .middle a {display:block;width:166px;height:18px;padding:3px 0 0 20px;background:#fff url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 9px;color:#5C5C5C;overflow:hidden;line-height:1.5em;}
+		#pageLocationArea .middle a:hover {background:#BED600 url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 8px;color:#2c2a1a;text-decoration:none;}
+		#pageLocationArea .middle a.on {color:#00959C;text-decoration:underline;}
+		#pageLocationArea .middle .pline {width:166px;height:1px;margin:5px 10px;border-top:1px solid #E1E4E6;overflow:hidden;}
+		#pageLocationArea .middle .sp {display:block;width:173px;height:11px;padding:5px 0 5px 13px;background:#fff;font-weight:bold;color:#5C5C5C;cursor:default;-webkit-text-stroke-width:.025em}
+		#pageLocationArea .middle .rc {float:left;width:186px;margin-top:10px;}
+	
+	#pageLocationArea .smallDetail {display:none;position:absolute;top:20px;right:-1px;padding-top:5px}
+	#pageLocationArea .smallDetail ul {width:373px;padding-bottom:10px;background:#fff;border:2px solid #BED600}
+		#pageLocationArea .smallDetail .lc {float:left;width:186px;margin-top:10px;border-right:1px solid #E1E4E6;}
+		#pageLocationArea .smallDetail a {display:block;width:166px;height:11px;padding:5px 0 5px 20px;background:#fff url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 9px;color:#5C5C5C;overflow:hidden;}
+		#pageLocationArea .smallDetail a:hover {background:#BED600 url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 8px;color:#2c2a1a;text-decoration:none;}
+		#pageLocationArea .smallDetail a.on {color:#00959C;text-decoration:underline;}
+		#pageLocationArea .smallDetail .pline {width:166px;height:1px;margin:5px 10px;border-top:1px solid #E1E4E6;overflow:hidden;}
+		#pageLocationArea .smallDetail .sp {display:block;width:173px;height:11px;padding:5px 0 5px 13px;background:#fff;font-weight:bold;color:#5C5C5C;cursor:default;-webkit-text-stroke-width:.025em}
+		#pageLocationArea .smallDetail .rc {float:left;width:186px;margin-top:10px;}
+
+		#pageLocationArea .mid {display:none;position:absolute;top:20px;left:0;padding-top:5px}
+		#pageLocationArea .mid ul {width:202px;height:222px;padding:15px 0;background:#fff;border:2px solid #BED600;overflow:auto;overflow-x:hidden}
+		#pageLocationArea .mid a {display:block;width:182px;height:11px;margin-bottom:3px;padding:4px 0 3px 20px;background:#fff url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 9px;color:#5C5C5C;}
+		#pageLocationArea .mid a:hover {background:#BED600 url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 8px;text-decoration:none;}
+		#pageLocationArea .mid a.on {color:#00959C;text-decoration:underline;}
+		#pageLocationArea .mid .sp {padding-left:13px;background:#fff;font-weight:bold;-webkit-text-stroke-width:.025em}
+			#pageLocationArea .mid .sp:hover {background:#BED600;}
+	#pageLocationArea .det {display:none;position:absolute;top:20px;right:0;padding-top:5px}
+	#pageLocationArea .det {width:202px;height:222px;padding:15px 0;background:#fff;border:2px solid #BED600;overflow:auto;overflow-x:hidden}
+		#pageLocationArea .det a {display:block;width:182px;height:11px;margin-bottom:3px;padding:4px 0 3px 20px;background:#fff url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 9px;color:#5C5C5C;}
+		#pageLocationArea .det a:hover {background:#BED600 url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bul_1.gif') no-repeat 13px 8px;text-decoration:none;}
+		#pageLocationArea .det .pline {width:166px;height:1px;margin:6px 10px;background:url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bg_dot_w.gif') repeat-x;overflow:hidden;}
+
+#pageLocationArea .on {display:block}
+#pageLocationArea .close {display:block;position:absolute;bottom:5px;right:5px;width:21px;height:21px;border:0 none;background:url(http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bdn_location_close.gif) no-repeat 5px 5px;font-size:0;text-indent:-999%;cursor:pointer}
+#pageLocationArea #pla1.on,#pageLocationArea #pla2.on, #pageLocationArea #pla3.on, #pageLocationArea #pla4.on {border-color:#bed600}
+
+/* so modf 2012-04-16 */	
+#pageLocationArea ul {overflow:hidden;}
+#pageLocationArea .lc,
+#pageLocationArea .rc { border-left:1px solid #E1E4E6; margin-left:-1px;}
+
+/* | footer | */
+#footer {clear:both;float:left;position:relative;width:100%;height:88px;margin:30px auto 0;background:url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bg_footer_top.gif') repeat-x;text-align:center;z-index:1;}
+	#footer div {width:995px;margin:0 auto;padding-top:27px;text-align:left;}
+
+/* | quick view | */
+#preOrderView {position:absolute;}
+
+/* | calendar | */
+#calendar {position:relative;width:181px;height:150px;padding:40px 10px 10px;background:#BED600;}
+	#calendar select {color:#000;}
+	#calendar .year {position:absolute;top:10px;left:10px;}
+	#calendar .month {position:absolute;top:10px;right:10px;}
+	#calendar .day {width:181px;height:118px;padding-top:12px;background:url('http://8986825504616229465-a-1802744773732722657-s-sites.googlegroups.com/site/picthst17817/gtes/bg_calendar.gif') no-repeat;}
+		#calendar td {height:22px;padding-right:5px;color:#8B8D8E;text-align:right;}
+		#calendar td span {font-weight:bold;color:#2C2A1A;}
+	#calendar .close {position:absolute;bottom:10px;right:10px;font-size:11px;color:#5A5B5C;cursor:pointer;}
+
+.error {clear:both;width:100%;margin:55px 0 45px;text-align:center;}
+	.error p {border-bottom:1px solid #E1E4E6;}
+	.error .txt {padding:20px 0;font:bold 14px 'dotum';color:#2c2a1a;}
+	.error .txt span {font:bold 15px 'arial';color:#2c2a1a;}
